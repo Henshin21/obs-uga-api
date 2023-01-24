@@ -1,0 +1,10 @@
+<!-- index.html -->
+<form action="/calculate" method="POST">
+    <select name="currency">
+        {% for code, currency in currencies %}
+            <option value="{{ code }}">{{ currency }}</option>
+        {% endfor %}
+    </select>
+    <input type="text" name="amount" placeholder="Ile chcesz kupić?">
+    <input type="submit" value="Przelicz">
+</form>
